@@ -1,38 +1,80 @@
+.mainContainer {
+  height: 700px;
+  width: 100%;
+  background-image: url("../src/IMG_20231027_153957.jpg");
+  background-size: 100% 700px;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  transition: background-color 1s;
+  width: 19.9%;
+  height: 43%;
+  border: 2px solid black;
+  margin-left: 620px;
+  margin-bottom: 50px;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App.game-over {
+  background-color: #ff5733;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 20px 0;
+}
+.game-board {
+  display: grid;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cell {
+  /* border: 2px solid black; */
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.snake {
+  background-color: #333;
+  border-radius: 50%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.food {
+  background-color: #f833ff;
+  animation: zoomInOut 1s ease infinite;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.2);
   }
+  100% {
+    transform: scale(1);
+  }
+}
+.h1 {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  cursor: pointer;
+  width: 150px;
+  height: 30px;
+  border-radius: 6px;
+}
+.button:hover {
+  background-color: blue;
 }
